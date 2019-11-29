@@ -1,0 +1,12 @@
+[28-Nov-2018 17:50:06 UTC] PHP Fatal error:  Uncaught exception 'OrmException' with message 'Trying to update a deleted object' in /home/prayercl/public_html/include/class.orm.php:570
+Stack trace:
+#0 /home/prayercl/public_html/include/class.translation.php(1009): VerySimpleModel->save(false)
+#1 /home/prayercl/public_html/include/ajax.i18n.php(99): CustomDataTranslation->save()
+#2 [internal function]: i18nAjaxAPI->updateTranslations('59bfe740cd051b9...')
+#3 /home/prayercl/public_html/include/class.dispatcher.php(145): call_user_func_array(Array, Array)
+#4 /home/prayercl/public_html/include/class.dispatcher.php(38): UrlMatcher->dispatch('translate/59bfe...', Array)
+#5 /home/prayercl/public_html/include/class.dispatcher.php(120): Dispatcher->resolve('translate/59bfe...', Array)
+#6 /home/prayercl/public_html/include/class.dispatcher.php(38): UrlMatcher->dispatch('/i18n/translate...', NULL)
+#7 /home/prayercl/public_html/scp/ajax.php(262): Dispatcher->resolve('/i18n/translate...')
+#8 {main}
+  thrown in /home/prayercl/public_html/include/class.orm.php on line 570

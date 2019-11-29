@@ -1,0 +1,6 @@
+---
+notes: >
+  Ces modèles définissent la page présentée aux Clients après avoir terminé le formulaire d'inscription. Le modèle devrait mentionner que le système leur envoie un lien de confirmation par courriel et quelle est la prochaine étape dans le processus d'inscription.
+name: "Enregistrement d'un compte"
+body: >
+  <div><strong>Merci pour l'ouverture d'un compte.</strong><br/><br />Nous venons juste de vous envoyer un courriel à l'adresse indiquée. Veuillez suivre ce lien pour confirmer votre compte et accédez à vos tickets.</div>

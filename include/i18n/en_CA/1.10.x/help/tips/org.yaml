@@ -1,0 +1,9 @@
+---
+org_sharing:
+  title: Ticket Sharing
+  content: >
+    <p> Organisation ticket sharing allows members access to tickets owned by other members of the organisation. </p> <p class="info-banner"> <i class="icon-info-sign"></i> Collaborators always have access to tickets. </p>
+email_domain:
+  title: Email Domain
+  content: >
+    Users can be automatically added to this organisation based on their email domain(s). Use the box below to enter one or more domains separated by commas. For example, enter <code>mycompany.com</code> for users with email addresses ending in @mycompany.com

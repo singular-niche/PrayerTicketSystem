@@ -1,0 +1,13 @@
+---
+groups:
+  title: Groupes
+  content: >
+    Les groupes sont utilisés pour définir les autorisations de l'Agent dans le service d'assistance. Les groupes peuvent également accorder l'accès aux services autre que le service initial d'un Agent.
+status:
+  title: État
+  content: >
+    Si ce groupe  <span class="doc-desc-opt"> est desactivé</span>, les Agents assignés à ce groupe ne pourront pas se connecter et ne recevront pas les alertes &amp; et avis du service.
+department_access:
+  title: Accès des services
+  content: >
+    Vérifier tous les services auxquels ont accès les membres du groupe.

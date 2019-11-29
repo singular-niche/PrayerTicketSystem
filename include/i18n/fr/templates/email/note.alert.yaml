@@ -1,0 +1,44 @@
+---
+notes: |
+  Alertes envoyées aux agents lorsqu'une activité interne comme une note interne ou la réponse d'un agent est ajoutée à un ticket.
+subject: |
+  Alerte d'une nouvelle activité interne
+body: |
+  <h3><strong>Bonjour %{recipient.name},</strong></h3>
+  Un agent à posté une note interne sur le ticket <a
+  href="%{ticket.staff_link}">#%{ticket.number}</a>
+  <br>
+  <br>
+  <table>
+  <tbody>
+  <tr>
+  <td>
+  <strong>De</strong>:
+  </td>
+  <td>
+  %{note.poster}
+  </td>
+  </tr>
+  <tr>
+  <td>
+  <strong>Titre</strong>:
+  </td>
+  <td>
+  %{note.title}
+  </td>
+  </tr>
+  </tbody>
+  </table>
+  <br>
+  %{note.message}
+  <br>
+  <br>
+  <hr>
+  Pour voir/répondre au ticket, merci de vous <a
+  href="%{ticket.staff_link}">connecter</a> au support
+  <br>
+  <br>
+  <em style="font-size: small; ">L'équipe du support</em>
+  <br>
+  <img src="cid:b56944cb4722cc5cda9d1e23a3ea7fbc"
+  alt="Powered by osTicket" width="126" height="19" style="width: 126px;">

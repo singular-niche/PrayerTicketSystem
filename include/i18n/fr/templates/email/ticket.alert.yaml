@@ -1,0 +1,42 @@
+---
+notes: |
+  Envoyé à un membre du personnel, lorsqu'un nouveau ticket est créé dans le système. Cela s'applique aux tickets créés via le courriel, le portail web ou l'api.
+subject: |
+  Alerte : Nouveau ticket
+body: |2
+  <h2>Bonjour %{recipient},</h2>
+  Nouveau ticket #%{ticket.number} créé
+  <br>
+  <br>
+  <table>
+  <tbody>
+  <tr>
+      <td>
+          <strong>De</strong>:
+      </td>
+      <td>
+          %{ticket.name} &lt;%{ticket.email}&gt;
+      </td>
+  </tr>
+  <tr>
+      <td>
+          <strong>Département</strong>:
+      </td>
+      <td>
+          %{ticket.dept.name}
+      </td>
+  </tr>
+  </tbody>
+  </table>
+  <br>
+  %{message}
+  <br>
+  <br>
+  <hr>
+  <div>Pour voir ou répondre au ticket merci de vous <a
+  href="%{ticket.staff_link}">connecter</a>dans le support</div>
+  <em style="font-size: small">Amicalement le Support client</em>
+  <br>
+  <a href="http://osticket.com/"><img width="126" height="19"
+      style="width: 126px; " alt="Powered By osTicket"
+      src="cid:b56944cb4722cc5cda9d1e23a3ea7fbc"/></a>

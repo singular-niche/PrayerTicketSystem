@@ -19,7 +19,7 @@ require('client.inc.php');
 if ($thisclient && $_GET['auth'] && $ost->validateLinkToken($_GET['auth']))
    $thisclient->logOut();
 
-osTicketSession::destroyCookie();
-
 Http::redirect('index.php');
+
+osTicketSession::destroyCookie();
 ?>

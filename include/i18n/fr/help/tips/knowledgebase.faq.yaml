@@ -1,0 +1,9 @@
+---
+listing_type:
+  title: Type d'annonce
+  content: >
+    Choisissez <span class="doc-desc-opt">public (public)</span> si vous souhaitez que cette <span class="doc-desc-title">FAQ</span> apparait sur la base de connaissances du public si la catégorie parent est publique.
+  links:
+    - 
+      title: Activer la base de connaissances publique pour le Portail Client
+      href: /scp/settings.php?t=kb

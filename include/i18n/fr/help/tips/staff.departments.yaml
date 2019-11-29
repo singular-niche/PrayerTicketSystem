@@ -1,0 +1,10 @@
+---
+type:
+  title: Type
+  content: >
+    Si le type du service est privé, alors la signature ne sera pas disponible sur les réponses ni l'affectation du service à partir du Portail Client.
+dept_manager:
+  title: Chef de service
+  content: >
+    Vous pouvez choisir un agent comme un chef de service afin de recevoir des alertes & avis des tickets.
+  0: Les agents n'ont pas besoin d'appartenir au service pour y être le responsable

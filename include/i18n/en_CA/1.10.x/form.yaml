@@ -1,0 +1,192 @@
+---
+- 
+  id: 1
+  type: U
+  title: Contact Information
+  flags: 0
+  fields:
+    - 
+      type: text
+      name: email
+      label: Email Address
+      sort: 1
+      flags: 489379
+      configuration:
+        size: 40
+        length: 64
+        validator: email
+    - 
+      type: text
+      name: name
+      label: Full Name
+      sort: 2
+      flags: 489379
+      configuration:
+        size: 40
+        length: 64
+    - 
+      type: phone
+      name: phone
+      label: Phone Number
+      sort: 3
+      flags: 13057
+    - 
+      type: memo
+      name: notes
+      label: Internal Notes
+      sort: 4
+      flags: 12289
+      configuration:
+        rows: 4
+        cols: 40
+- 
+  id: 2
+  type: T
+  title: Ticket Details
+  instructions: Please Describe Your Issue
+  notes: |
+    This form will be attached to every ticket, regardless of its source. You can add any fields to this form and they will be available to all tickets, and will be searchable with advanced search and filterable.
+  flags: 0
+  fields:
+    - 
+      id: 20
+      type: text
+      name: subject
+      label: Issue Summary
+      sort: 1
+      flags: 489249
+      configuration:
+        size: 40
+        length: 50
+    - 
+      id: 21
+      type: thread
+      name: message
+      label: Issue Details
+      hint: Details on the reason(s) for opening the ticket.
+      sort: 2
+      flags: 480547
+    - 
+      id: 22
+      type: priority
+      name: priority
+      label: Priority Level
+      flags: 274609
+      sort: 3
+- 
+  type: C
+  title: Company Information
+  instructions: Details available in email templates
+  flags: 0
+  fields:
+    - 
+      type: text
+      name: name
+      label: Company Name
+      sort: 1
+      flags: 291233
+      configuration:
+        size: 40
+        length: 64
+    - 
+      type: text
+      name: website
+      label: Website
+      sort: 2
+      flags: 12545
+      configuration:
+        size: 40
+        length: 64
+    - 
+      type: phone
+      name: phone
+      label: Phone Number
+      sort: 3
+      flags: 12545
+      configuration:
+        ext: false
+    - 
+      type: memo
+      name: address
+      label: Address
+      sort: 4
+      flags: 12545
+      configuration:
+        rows: 2
+        cols: 40
+        html: false
+        length: 100
+- 
+  type: O
+  title: Organisation Information
+  instructions: Details on user organisation
+  flags: 0
+  fields:
+    - 
+      type: text
+      name: name
+      label: Name
+      sort: 1
+      flags: 489379
+      configuration:
+        size: 40
+        length: 64
+    - 
+      type: memo
+      name: address
+      label: Address
+      sort: 2
+      flags: 13057
+      configuration:
+        rows: 2
+        cols: 40
+        length: 100
+        html: false
+    - 
+      type: phone
+      name: phone
+      label: Phone
+      sort: 3
+      flags: 13057
+    - 
+      type: text
+      name: website
+      label: Website
+      sort: 4
+      flags: 13057
+      configuration:
+        size: 40
+        length: 0
+    - 
+      type: memo
+      name: notes
+      label: Internal Notes
+      sort: 5
+      flags: 12289
+      configuration:
+        rows: 4
+        cols: 40
+- 
+  type: A
+  title: Task Details
+  instructions: Please Describe The Issue
+  notes: |
+    This form is used to create a task.
+  flags: 0
+  fields:
+    - 
+      type: text
+      name: title
+      flags: 290977
+      sort: 1
+      label: Title
+      configuration:
+        size: 40
+        length: 50
+    - 
+      type: thread
+      name: description
+      flags: 282867
+      sort: 2
+      label: Description
+      hint: Details on the reason(s) for creating the task.

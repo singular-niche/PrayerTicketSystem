@@ -31,12 +31,17 @@ if ($info['topicId'] && ($topic=Topic::lookup($info['topicId']))) {
 }
 
 ?>
+<script>
+  fbq('track', 'ViewContent');
+</script>
+
 <h1><?php echo __('Open a New Ticket');?></h1>
 <p><?php echo __('Please fill in the form below to open a new ticket.');?></p>
-<form id="ticketForm" method="post" action="open.php" enctype="multipart/form-data">
+<div class="w3-responsive">
+<form id="ticketForm" method="post" action="open.php" enctype="multipart/form-data" class="w3-panel w3-card-4 w3-light-gray">
   <?php csrf_token(); ?>
-  <input type="hidden" name="a" value="open">
-  <table width="800" cellpadding="1" cellspacing="0" border="0">
+  <input type="hidden" name="a" value="open" class="w3-input">
+  <table width="800" cellpadding="0" cellspacing="0" border="0" class="w3-table">
     <tbody>
 <?php
         if (!$thisclient) {
@@ -45,22 +50,18 @@ if ($info['topicId'] && ($topic=Topic::lookup($info['topicId']))) {
             $uform->render(false);
         }
         else { ?>
-            <tr><td colspan="2"><hr /></td></tr>
-        <tr><td><?php echo __('Email'); ?>:</td><td><?php
+        <tr><td colspan="2"><?php echo __('Email'); ?>: <?php
             echo $thisclient->getEmail(); ?></td></tr>
-        <tr><td><?php echo __('Client'); ?>:</td><td><?php
+        <tr><td colspan="2"><?php echo __('Client'); ?>: <?php
             echo Format::htmlchars($thisclient->getName()); ?></td></tr>
         <?php } ?>
     </tbody>
     <tbody>
-    <tr><td colspan="2"><hr />
-        <div class="form-header" style="margin-bottom:0.5em">
-        <b><?php echo __('Help Topic'); ?></b>
+    <tr><td colspan="2">
+        <div>
+        <b><?php echo __('Help Topic'); ?></b><font class="error">*&nbsp;<?php echo $errors['topicId']; ?></font>
         </div>
-    </td></tr>
-    <tr>
-        <td colspan="2">
-            <select id="topicId" name="topicId" onchange="javascript:
+        <select id="topicId" class="w3-auto w3-select" name="topicId" onchange="javascript:
                     var data = $(':input[name]', '#dynamic-form').serialize();
                     $.ajax(
                       'ajax.php/form/help-topic/' + this.value,
@@ -84,9 +85,7 @@ if ($info['topicId'] && ($topic=Topic::lookup($info['topicId']))) {
                 <?php
                 } ?>
             </select>
-            <font class="error">*&nbsp;<?php echo $errors['topicId']; ?></font>
-        </td>
-    </tr>
+    </td></tr>
     </tbody>
     <tbody id="dynamic-form">
         <?php foreach ($forms as $form) {
@@ -104,21 +103,19 @@ if ($info['topicId'] && ($topic=Topic::lookup($info['topicId']))) {
         <td>
             <span class="captcha"><img src="captcha.php" border="0" align="left"></span>
             &nbsp;&nbsp;
-            <input id="captcha" type="text" name="captcha" size="6" autocomplete="off">
+            <input id="captcha" type="text" name="captcha" size="6" autocomplete="off" class="w3-input">
             <em><?php echo __('Enter the text shown on the image.');?></em>
             <font class="error">*&nbsp;<?php echo $errors['captcha']; ?></font>
         </td>
     </tr>
     <?php
     } ?>
-    <tr><td colspan=2>&nbsp;</td></tr>
     </tbody>
   </table>
-<hr/>
-  <p class="buttons" style="text-align:center;">
-        <input type="submit" value="<?php echo __('Create Ticket');?>">
-        <input type="reset" name="reset" value="<?php echo __('Reset');?>">
-        <input type="button" name="cancel" value="<?php echo __('Cancel'); ?>" onclick="javascript:
+  <p class="w3-cell-row" style="text-align:center; margin-top:3px;">
+        <input class="w3-container w3-cell w3-btn w3-round w3-pale-green w3-padding w3-hover-green" type="submit" value="<?php echo __('Create Ticket');?>">
+        <input class="w3-container w3-cell w3-btn w3-round w3-pale-blue w3-padding w3-hover-blue" type="reset" name="reset" value="<?php echo __('Reset');?>">
+        <input class="w3-container w3-cell w3-btn w3-round w3-white w3-padding w3-hover-grey" type="button" name="cancel" value="<?php echo __('Cancel'); ?>" onclick="javascript:
             $('.richtext').each(function() {
                 var redactor = $(this).data('redactor');
                 if (redactor && redactor.opts.draftDelete)
@@ -127,3 +124,4 @@ if ($info['topicId'] && ($topic=Topic::lookup($info['topicId']))) {
             window.location.href='index.php';">
   </p>
 </form>
+</div>

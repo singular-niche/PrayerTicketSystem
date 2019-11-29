@@ -1,0 +1,5 @@
+---
+notes: >
+  Ceci est la bannière et le message initial montré sur la page de connexion de l’équipe. Le premier champ entré fait référence au texte en rouge qui apparaît en haut. Le composant texte constitue le contenu de la bannière qui servira d'avertissement.
+name: "Authentification requise"
+body: ""

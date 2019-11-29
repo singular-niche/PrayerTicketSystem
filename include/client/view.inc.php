@@ -27,32 +27,34 @@ if ($thisclient && $thisclient->isGuest()
 
 <?php } ?>
 
-<table width="800" cellpadding="1" cellspacing="0" border="0" id="ticketInfo">
-    <tr>
-        <td colspan="2" width="100%">
+<div id="ticketInfo" class="w3-container">
+    <div class="w3-cell-row">
+        <div class="w3-cell w3-container w3-mobile">
             <h1>
-                <a href="tickets.php?id=<?php echo $ticket->getId(); ?>" title="<?php echo __('Reload'); ?>"><i class="refresh icon-refresh"></i></a>
-                <b>
-                <?php $subject_field = TicketForm::getInstance()->getField('subject');
-                    echo $subject_field->display($ticket->getSubject()); ?>
-                </b>
-                <small>#<?php echo $ticket->getNumber(); ?></small>
-<div class="pull-right">
-    <a class="action-button" href="tickets.php?a=print&id=<?php
-        echo $ticket->getId(); ?>"><i class="icon-print"></i> <?php echo __('Print'); ?></a>
-<?php if ($ticket->hasClientEditableFields()
-        // Only ticket owners can edit the ticket details (and other forms)
-        && $thisclient->getId() == $ticket->getUserId()) { ?>
-                <a class="action-button" href="tickets.php?a=edit&id=<?php
-                     echo $ticket->getId(); ?>"><i class="icon-edit"></i> <?php echo __('Edit'); ?></a>
-<?php } ?>
-</div>
+            <a href="tickets.php?id=<?php echo $ticket->getId(); ?>" title="<?php echo __('Reload'); ?>"><i class="refresh icon-refresh"></i></a>
+            <b>
+            <?php $subject_field = TicketForm::getInstance()->getField('subject');
+            echo $subject_field->display($ticket->getSubject()); ?>
+            </b>
+            <small>#<?php echo $ticket->getNumber(); ?></small>
             </h1>
-        </td>
-    </tr>
-    <tr>
-        <td width="50%">
-            <table class="infoTable" cellspacing="1" cellpadding="3" width="100%" border="0">
+        </div>
+        <div class="w3-cell w3-container w3-mobile">
+            <div class="w3-cell-row">
+            <a class="w3-cell w3-btn w3-round w3-light-grey w3-hover-pale-green" href="tickets.php?a=print&id=<?php
+            echo $ticket->getId(); ?>"><i class="icon-print"></i> <?php echo __('Print'); ?></a>
+            <?php if ($ticket->hasClientEditableFields()
+            // Only ticket owners can edit the ticket details (and other forms)
+            && $thisclient->getId() == $ticket->getUserId()) { ?>
+            <a class="w3-cell w3-btn w3-round w3-light-grey w3-hover-pale-green" href="tickets.php?a=edit&id=<?php
+            echo $ticket->getId(); ?>"><i class="icon-edit"></i> <?php echo __('Edit'); ?></a>
+            <?php } ?>
+            </div>
+        </div>
+    </div>
+    <div class="w3-cell-row">
+        <div class="w3-cell w3-container w3-mobile">
+            <table class="infoTable w3-table" cellspacing="1" cellpadding="3" width="100%" border="0">
                 <thead>
                     <tr><td class="headline" colspan="2">
                         <?php echo __('Basic Ticket Information'); ?>
@@ -71,9 +73,9 @@ if ($thisclient && $thisclient->isGuest()
                     <td><?php echo Format::datetime($ticket->getCreateDate()); ?></td>
                 </tr>
            </table>
-       </td>
-       <td width="50%">
-           <table class="infoTable" cellspacing="1" cellpadding="3" width="100%" border="0">
+       </div>
+       <div class="w3-cell w3-container w3-mobile">
+           <table class="infoTable w3-table" cellspacing="1" cellpadding="3" width="100%" border="0">
                 <thead>
                     <tr><td class="headline" colspan="2">
                         <?php echo __('User Information'); ?>
@@ -92,10 +94,9 @@ if ($thisclient && $thisclient->isGuest()
                    <td><?php echo $ticket->getPhoneNumber(); ?></td>
                </tr>
             </table>
-       </td>
-    </tr>
-    <tr>
-        <td colspan="2">
+       </div>
+    </div>
+    <div>
 <!-- Custom Data -->
 <?php
 $sections = array();
@@ -114,7 +115,7 @@ foreach (DynamicFormEntry::forTicket($ticket->getId()) as $i=>$form) {
 }
 foreach ($sections as $i=>$answers) {
     ?>
-        <table class="custom-data" cellspacing="0" cellpadding="4" width="100%" border="0">
+        <table class="custom-data w3-table" cellspacing="0" cellpadding="4" width="100%" border="0">
         <tr><td colspan="2" class="headline flush-left"><?php echo $form->getTitle(); ?></th></tr>
 <?php foreach ($answers as $A) {
     list($v, $a) = $A; ?>
@@ -130,9 +131,9 @@ echo $v;
         </table>
     <?php
 } ?>
-    </td>
-</tr>
-</table>
+    </div>
+</div>
+</div>
 <br>
 
 <?php
@@ -141,18 +142,16 @@ echo $v;
                 'html-id' => 'ticketThread')
             );
 ?>
-
-<div class="clear" style="padding-bottom:10px;"></div>
 <?php if($errors['err']) { ?>
-    <div id="msg_error"><?php echo $errors['err']; ?></div>
+    <div class="w3-panel w3-pale-red w3-container w3-padding-small w3-margin w3-border"><?php echo $errors['err']; ?></div>
 <?php }elseif($msg) { ?>
-    <div id="msg_notice"><?php echo $msg; ?></div>
+    <div class="w3-panel w3-pale-green w3-container w3-padding-small w3-margin w3-border"><?php echo $msg; ?></div>
 <?php }elseif($warn) { ?>
-    <div id="msg_warning"><?php echo $warn; ?></div>
+    <div class="w3-panel w3-pale-yellow w3-container w3-padding-small w3-margin w3-border"><?php echo $warn; ?></div>
 <?php }
 
 if (!$ticket->isClosed() || $ticket->isReopenable()) { ?>
-<form id="reply" action="tickets.php?id=<?php echo $ticket->getId();
+<form class="w3-container w3-margin" id="reply" action="tickets.php?id=<?php echo $ticket->getId();
 ?>#reply" name="reply" method="post" enctype="multipart/form-data">
     <?php csrf_token(); ?>
     <h2><?php echo __('Post a Reply');?></h2>
@@ -179,10 +178,10 @@ echo $attrs; ?>><?php echo $draft ?: $info['message'];
         <?php echo __('Ticket will be reopened on message post'); ?>
     </div>
 <?php } ?>
-    <p style="text-align:center">
-        <input type="submit" value="<?php echo __('Post Reply');?>">
-        <input type="reset" value="<?php echo __('Reset');?>">
-        <input type="button" value="<?php echo __('Cancel');?>" onClick="history.go(-1)">
+    <p class="w3-cell-row" style="text-align:center">
+        <input class="w3-container w3-cell w3-btn w3-round w3-pale-green w3-hover-green w3-padding" type="submit" value="<?php echo __('Post Reply');?>">
+        <input class="w3-container w3-cell w3-btn w3-round w3-pale-blue w3-hover-blue w3-padding" type="reset" value="<?php echo __('Reset');?>">
+        <input class="w3-container w3-cell w3-btn w3-round w3-white w3-hover-grey w3-padding" type="button" value="<?php echo __('Cancel');?>" onClick="history.go(-1)">
     </p>
 </form>
 <?php

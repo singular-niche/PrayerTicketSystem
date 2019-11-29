@@ -1,0 +1,15 @@
+---
+- 
+  id: 1
+  name: General Tickets
+  next: 1
+  padding: 0
+  increment: 1
+  flags: 1
+- 
+  id: 2
+  name: "Tasks Sequence"
+  next: 1
+  padding: '0'
+  increment: 1
+  flags: 1

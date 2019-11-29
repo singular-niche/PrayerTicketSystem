@@ -1,0 +1,21 @@
+---
+email_templates:
+  title: Email Templates
+  content: >
+    Email Template Sets are used to send Auto-Responses and Alerts for various actions that can take place during a Ticket’s lifetime.
+template_to_clone:
+  title: Template to Clone
+  content: >
+    Choose a Template Set to clone or simply start with the stock email templates.
+language:
+  title: Language
+  content: >
+    Select desired language for the <span class="doc-desc-opt">stock</span> <span class="doc-desc-title">Email Template Set</span>. Language packs are available on osTicket.com.
+  links:
+    - 
+      title: osTicket Language Packs
+      href: 'http://osticket.com/download'
+status:
+  title: Status
+  content: >
+    <span class="doc-desc-opt">Enabled</span> Template Sets are available to be associated with Departments and set to the system default.  Template Sets currently in-use cannot be <span class="doc-desc-opt">Disabled</span>.

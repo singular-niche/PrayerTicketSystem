@@ -1,0 +1,7 @@
+---
+notes: |
+  Envoyé à un utilisateur lorsque l'utilisateur poste un nouveau message sur un ticket. Cela peut se produire si l'utilisateur répond à un courrier électronique du système ou visite le portail client et y poste un nouveau message.
+subject: |
+  Confirmation de Message
+body: |
+  <h3><strong>Cher %{recipient.name.first},</strong></h3> Votre réponse à la demande de service d'assistance <a href="%{recipient.ticket_link}">#%{ticket.number}</a> a été prise en compte.<br><br><div style="color: rgb(127, 127, 127);"> Votre équipe %{company.name}, <br>%{signature}</div> <hr><div style="color: rgb(127, 127, 127); font-size: small; text-align: center"> <em>Vous pouvez visualiser, en ligne, l'avancement de votre demande en cliquant <a href="%{recipient.ticket_link}">ici</a></em></div>

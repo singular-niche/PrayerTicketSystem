@@ -1,0 +1,19 @@
+---
+- 
+  isactive: 1
+  execorder: 99
+  match_all_rules: 0
+  email_id: 0
+  target: Email
+  name: SYSTEM BAN LIST
+  notes: Internal list for email banning. Do not remove
+  rules:
+    - 
+      isactive: 1
+      what: email
+      how: equal
+      val: test@example.com
+  actions:
+    - 
+      sort: 1
+      type: reject

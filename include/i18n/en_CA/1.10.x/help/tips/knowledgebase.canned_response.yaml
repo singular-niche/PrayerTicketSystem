@@ -1,0 +1,13 @@
+---
+canned_response:
+  title: Canned Response
+  content: >
+    Create a <span class="doc-desc-title">Canned Response</span> that can be included in a ticket response. It can also be used as a <span class="doc-desc-title">Ticket Auto-Response</span> setup by a <span class="doc-desc-title">Ticket Filter</span>.
+  links:
+    - 
+      title: Setup a Ticket Filter
+      href: /scp/filters.php
+canned_attachments:
+  title: Canned Attachments
+  content: >
+    Attach a file  that you would like to be automatically included in the ticket response that utilises the new <span class="doc-desc-title"> Canned Response</span>.

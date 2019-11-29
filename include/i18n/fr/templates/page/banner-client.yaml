@@ -1,0 +1,6 @@
+---
+notes: >
+  Ceci compose l'en-tête de la page de connexion du Client. Ceci peut être utile pour informer vos clients sur vos politiques d'enregistrement et de connexion.
+name: "Connectez-vous à %{company.name}"
+body: >
+  Afin de pouvoir mieux les servir, nous encourageons nos Clients à ouvrir un compte.

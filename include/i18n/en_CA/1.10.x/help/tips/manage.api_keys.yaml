@@ -1,0 +1,13 @@
+---
+api_key:
+  title: API Key
+  content: >
+    API keys are used to authenticate clients submitting new tickets via the Application Programming Interface (API). API keys are used instead of passwords. Since API keys may be sent unencrypted, they are linked to each client's network IP address.
+  links:
+    - 
+      title: osTicket API Documentation
+      href: 'https://github.com/osTicket/osTicket-1.8/blob/develop/setup/doc/api.md'
+ip_addr:
+  title: IP Address
+  content: >
+    Client's network IP address. Each unique client IP address will require separate API keys

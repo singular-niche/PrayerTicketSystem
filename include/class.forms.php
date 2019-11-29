@@ -670,9 +670,9 @@ class FormField {
         # Validates a user-input into an instance of this field on a dynamic
         # form
         if ($this->get('required') && !$value && $this->hasData())
-            $this->_errors[] = $this->getLabel()
+            $this->_errors[] = /*$this->getLabel()
                 ? sprintf(__('%s is a required field'), $this->getLabel())
-                : __('This is a required field');
+                :*/ __('This is a required field');
 
         # Perform declared validators for the field
         if ($vs = $this->get('validators')) {
@@ -3232,13 +3232,13 @@ class TextboxWidget extends Widget {
         $placeholder = sprintf('placeholder="%s"', $this->field->getLocal('placeholder',
             $config['placeholder']));
         ?>
-        <input type="<?php echo $type; ?>"
+        <input class="w3-input" type="<?php echo $type; ?>"
             id="<?php echo $this->id; ?>"
             <?php echo implode(' ', array_filter(array(
                 $size, $maxlength, $classes, $autocomplete, $disabled,
                 $translatable, $placeholder, $autofocus))); ?>
             name="<?php echo $this->name; ?>"
-            value="<?php echo Format::htmlchars($this->value); ?>"/>
+            value="<?php echo Format::htmlchars($this->value); ?>" />
         <?php
     }
 }
@@ -3338,13 +3338,13 @@ class PhoneNumberWidget extends Widget {
         list($phone, $ext) = explode("X", $this->value);
         ?>
         <input id="<?php echo $this->id; ?>" type="tel" name="<?php echo $this->name; ?>" value="<?php
-        echo Format::htmlchars($phone); ?>"/><?php
+        echo Format::htmlchars($phone); ?>" class="w3-input" /><?php
         // Allow display of extension field even if disabled if the phone
         // number being edited has an extension
         if ($ext || $config['ext']) { ?> <?php echo __('Ext'); ?>:
             <input type="text" name="<?php
             echo $this->name; ?>-ext" value="<?php echo Format::htmlchars($ext);
-                ?>" size="5"/>
+                ?>" size="5" class="w3-input" />
         <?php }
     }
 
@@ -3550,7 +3550,7 @@ class BoxChoicesWidget extends Widget {
         <input id="<?php echo $id; ?>" type="<?php echo $type; ?>"
             name="<?php echo $this->name; ?>[]" <?php
             if ($this->value[$k]) echo 'checked="checked"'; ?> value="<?php
-            echo Format::htmlchars($k); ?>"/>
+            echo Format::htmlchars($k); ?>" class="w3-input" />
         <?php
         if ($v) {
             echo Format::viewableImages($v);
@@ -3685,7 +3685,7 @@ class CheckboxWidget extends Widget {
         <input id="<?php echo $this->id; ?>"
             type="checkbox" name="<?php echo $this->name; ?>[]" <?php
             if ($this->value) echo 'checked="checked"'; ?> value="<?php
-            echo $this->field->get('id'); ?>"/>
+            echo $this->field->get('id'); ?>" class="w3-input" />
         <?php
         if ($config['desc']) {
             echo Format::viewableImages($config['desc']);
@@ -3740,7 +3740,7 @@ class DatetimePickerWidget extends Widget {
         <input type="text" name="<?php echo $this->name; ?>"
             id="<?php echo $this->id; ?>" style="display:inline-block;width:auto"
             value="<?php echo Format::htmlchars($this->value ?: ''); ?>" size="12"
-            autocomplete="off" class="dp" />
+            autocomplete="off" class="dp w3-input" />
         <script type="text/javascript">
             $(function() {
                 $('input[name="<?php echo $this->name; ?>"]').datepicker({
@@ -3919,7 +3919,7 @@ class FileUploadWidget extends Widget {
                 '<a href="#" class="manual">', '</a>'); ?>
         <input type="file" multiple="multiple"
             id="file-<?php echo $id; ?>" style="display:none;"
-            accept="<?php echo implode(',', $config['__mimetypes']); ?>"/>
+            accept="<?php echo implode(',', $config['__mimetypes']); ?>" class="w3-input" />
         </div></div>
         <script type="text/javascript">
         $(function(){$('#<?php echo $id; ?> .dropzone').filedropbox({

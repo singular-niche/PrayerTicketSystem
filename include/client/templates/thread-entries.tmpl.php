@@ -8,7 +8,7 @@ $event = $events->current();
 
 $htmlId = $options['html-id'] ?: ('thread-'.$this->getId());
 ?>
-<div id="<?php echo $htmlId; ?>" data-thread-id="<?php echo $this->getId(); ?>">
+<div id="<?php echo $htmlId; ?>" data-thread-id="<?php echo $this->getId(); ?>" class="w3-container">
 <?php
 if (count($entries)) {
     // Go through all the entries and bucket them by time frame

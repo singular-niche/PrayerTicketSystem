@@ -1,0 +1,5 @@
+---
+ban_list:
+  title: Adresses électroniques bannies
+  content: >
+    Les courriels reçus provenant de courriels bannies enregistrés dans la liste des bannies seront automatiquement rejetés.

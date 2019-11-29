@@ -1,0 +1,9 @@
+---
+staff_members:
+  title: Staff Members
+  content: >
+    The following table displays the results of the filter above. If not filter settings are chosen, then all <span class="doc-desc-title">Agent</span> (Staff) <span class="doc-desc-title">Members</span> are displayed, and broken up by pages. See the pages section below to navigate through more results.
+status:
+  title: Status
+  content: >
+    This will display whether the <span class="doc-desc-title">Agent</span> is Locked, Active, or Active (Vacation).

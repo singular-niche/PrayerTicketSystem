@@ -15,18 +15,18 @@ if ($content) {
 }
 
 ?>
-<h1><?php echo Format::display($title); ?></h1>
-<p><?php echo Format::display($body); ?></p>
-<form action="login.php" method="post" id="clientLogin">
+<h1><?php echo /*Format::display($title)*/__('Sign In')/*added ends*/; ?></h1>
+<p><?php echo /*Format::display($body)*/__('To better serve you, we encourage our clients to register for an account and verify the email address we have on record.')/*added ends*/; ?></p>
+<form action="login.php" method="post" id="clientLogin" class="w3-card w3-responsive">
     <?php csrf_token(); ?>
-<div style="display:table-row">
-    <div class="login-box">
+<div class="w3-cell-row">
+    <div class="w3-cell w3-container w3-mobile">
     <strong><?php echo Format::htmlchars($errors['login']); ?></strong>
     <div>
-        <input id="username" placeholder="<?php echo __('Email or Username'); ?>" type="text" name="luser" size="30" value="<?php echo $email; ?>" class="nowarn">
+        <input id="username" placeholder="<?php echo __('Email or Username'); ?>" type="text" name="luser" size="30" value="<?php echo $email; ?>" class="nowarn w3-input">
     </div>
     <div>
-        <input id="passwd" placeholder="<?php echo __('Password'); ?>" type="password" name="lpasswd" size="30" value="<?php echo $passwd; ?>" class="nowarn"></td>
+        <input id="passwd" placeholder="<?php echo __('Password'); ?>" type="password" name="lpasswd" size="30" value="<?php echo $passwd; ?>" class="nowarn w3-input"></td>
     </div>
     <p>
         <input class="btn" type="submit" value="<?php echo __('Sign In'); ?>">
@@ -35,7 +35,7 @@ if ($content) {
 <?php } ?>
     </p>
     </div>
-    <div style="display:table-cell;padding: 15px;vertical-align:top">
+    <div class="w3-cell w3-container w3-mobile" style="padding: 15px;vertical-align:top">
 <?php
 
 $ext_bks = array();
