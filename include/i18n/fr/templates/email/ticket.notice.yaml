@@ -1,0 +1,7 @@
+---
+notes: |
+  Envoyé à un utilisateur lorsqu'un membre du personnel crée un ticket à son nom. C'est le plus fréquemment utilisé lorsque l'utilisateur appel au téléphone.
+subject: |
+  %{ticket.subject} [#%{ticket.number}]
+body: |
+  <h3><strong>Cher %{recipient.name.first},</strong></h3> Notre service client a créé un ticket, <a href="%{recipient.ticket_link}"> #%{ticket.number}</a> à votre nom, avec les détails suivants : <br><br>rubrique: <strong>%{ticket.topic.name}</strong> <br>sujet: <strong>%{ticket.subject}</strong> <br><br>%{message} <br><br>Si nécessaire, un membre de notre équipe se rapproche de vous dès que possible. Vous pouvez également <a href="%{recipient.ticket_link}"> suivre l'avancement de ce ticket en ligne</a>. <br><br><div style="color: rgb(127, 127, 127);"> L'equipe de %{company.name} , <br>%{signature}</div> <hr><div style="color: rgb(127, 127, 127); font-size: small;"> <em>si vous souhaitez fournir des commentaires ou des informations supplémentaires au sujet de ce ticket, répondez simplement à cet email ou <a href="%{recipient.ticket_link}"> <span style="color: rgb(84, 141, 212);" > connectez-vous à votre compte</span></a> pour visualiser les archives complètes de vos demandes de support.</em></div>

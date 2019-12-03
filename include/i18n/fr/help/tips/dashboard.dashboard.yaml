@@ -1,0 +1,41 @@
+---
+ticket_activity:
+  title: Activité du ticket
+  content: >
+    Sélectionnez une plage de dates pour mettre en cause à la fois le graphique et la table de  (cf. <span class="doc-desc-title"> statistiques</span>) ci-dessous pour se focaliser sur toutes les données correspondantes aux mêmes dates. Le graphique ci-dessous reflétera toujours une vue large des données de l'ensemble du système (par ex, la population). Toutefois, vous pouvez vous déplacer à travers la table <span class="doc-desc-title"> statistiques</span> ci-dessous pour se concentrer sur un sujet plus restreint d'intérêt (p. ex., ministère, sujets ou personnel). En outre, vous pouvez exporter toutes les données actuellement affichées dans le tableau de <span class="doc-desc-title"> statistiques</span>.
+report_timeframe:
+  title: Période de rapport
+  content: >
+    Choisissez une date de début pour l'échantillon de données désiré en utilisant le sélecteur de dates. Puis, choisissez la durée de départ de cette date pour définir la date de fin de votre échantillon de données.
+statistics:
+  title: Statistiques
+  content: >
+    Naviguez jusqu'au sujet d'intérêt en cliquant sur l'onglet approprié pour afficher l’échantillon spécifique des données. Au sein de la table, les cercles représentent la taille des données nominales. Par conséquent, plus le nombre est grand dans une cellule particulière, plus le cercle adjacent est grand.
+opened:
+  title: Ouverts
+  content: >
+    Il s'agit des tickets ouverts par des Agents (c.-à-d., ouvert en interne) et pas par les Clients.
+assigned:
+  title: Assigné
+  content: >
+    Le système suit chaque événement par lequel un ticket est automatiquement ou manuellement assigné à un service ou à un agent en particulier. Les assignations automatiques dépendront des paramètres établis pour les <span class="doc-desc-title"> rubriques d'aide</span> et <span class="doc-desc-title"> pour les filtres de messagerie</span> dans le panneau Admin.
+overdue:
+  title: En retard
+  content: >
+    Il s'agit de la quantité de tickets qui ont transgressé le Plan SLA auquel ils appartenaient.
+closed:
+  title: Fermé
+  content: >
+    Il s'agit du nombre de tickets qui ont été clôturés.
+reopened:
+  title: Ré-ouvert
+  content: >
+    Il s'agit de la quantité de tickets qui ont été ré-ouverts par un Agent ou par un Client lorsqu'il/elle a répondu alors que le ticket était dans un état fermé.
+service_time:
+  title: Durée d'utilisation
+  content: >
+    <span class="doc-desc-title">Le temps de service</span> est la durée de temps qui commence à l'ouverture d'un ticket et se termine lorsque le ticket est fermé. La colonne de <span class="doc-desc-title">Temps de Service</span> ici mesure le temps moyen de Service par ticket, en heures, dans la periode spécifiée.
+response_time:
+  title: Temps de réponse
+  content: >
+    <span class="doc-desc-title"> Le temps de réponse</span> est une durée de temps qui commence avec la correspondance de n'importe quel Client et se termine lorsqu'un Agent fait une réponse. Cette mesure du temps n'est pas exclusive à la correspondance du Client de l'ouverture initiale du billet. Il s'agit de tout acte de discours originals avec un Client.

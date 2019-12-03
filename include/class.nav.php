@@ -331,7 +331,7 @@ class UserNav {
 
             $navs = array();
             $user = $this->user;
-            $navs['home']=array('desc'=>__('Support Center Home'),'href'=>'index.php','title'=>'');
+            $navs['home']=array('desc'=>__('Prayer Ticket System Home'),'href'=>'index.php','title'=>'');
             if($cfg && $cfg->isKnowledgebaseEnabled())
                 $navs['kb']=array('desc'=>__('Knowledgebase'),'href'=>'kb/index.php','title'=>'');
 

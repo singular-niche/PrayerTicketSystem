@@ -1,0 +1,13 @@
+---
+name:
+  title: Nom
+  content: >
+    Choisissez un nom pour ce <span class="doc-desc-title">SLA</span> correspondant à son objet.
+grace_period:
+  title: Période de Grâce
+  content: >
+    Déterminer le nombre d'heures après avoir créé un ticket pour qu'il soit automatiquement marqué comme en retard. <br><br><em>Les heures sont comptées depuis la date de création du ticket.</em>
+transient:
+  title: Transitoire
+  content: >
+    Les SLA transitoires sont considérés comme temporaires et peuvent être substituée par un SLA non transitoire relatif au transfert de <span class="doc-desc-opt">Service</span> ou lorsque sa <span class="doc-desc-title"> rubrique d'aide</span> est modifiée.

@@ -5,7 +5,7 @@
         <a id="poweredBy" href="http://osticket.com" target="_blank"><?php echo __('Helpdesk software - powered by osTicket'); ?></a>
     </div>
 <div id="overlay"></div>
-<div id="loading">
+<div class="w3-card w3-container w3-padding w3-hide">
     <h4><?php echo __('Please Wait!');?></h4>
     <p><?php echo __('Please wait... it will take a second!');?></p>
 </div>

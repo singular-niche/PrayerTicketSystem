@@ -1,0 +1,29 @@
+---
+custom_lists:
+  title: Listes personnalisées
+  content: >
+    Vos <span class="doc-desc-title">listes personnalisées</span> vous permettront de créer des listes déroulantes avec des options prédéfinies dans lesquelles un Client peut choisir dans vos <span class="doc-desc-title">Formulaires personnalisés</span>. Si vous souhaitez utiliser cette <span class="doc-desc-title">liste personnalisée</span> comme une <span class="doc-desc-title">cible</span> dans un <span class="doc-desc-title">Filtre de billet</span>, n'oubliez pas d'ajouter cette liste à votre formulaire de <span class="doc-desc-title">Détails du billet</span>.
+name:
+  title: Nom
+  content: >
+    
+plural_name:
+  title: Nom au pluriel
+  content: >
+    
+sort_order:
+  title: Ordre de tri
+  content: >
+    
+list_s_initial_items:
+  title: Liste initiale des éléments
+  content: >
+    
+value:
+  title: Valeur
+  content: >
+    
+extra:
+  title: Extra
+  content: >
+    Abréviations et autres. S'il vous arrive d'utiliser des codes internes pour les éléments de cette liste, ces codes et abréviations peuvent figurer dans cette colonne. Si la liste personnalisée est restituée comme une <span class="doc-desc-option">en-tête</span>, ces abréviations peuvent être utilisées pour rechercher les éléments de liste personnalisée.

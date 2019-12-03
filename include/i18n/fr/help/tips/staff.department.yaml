@@ -1,0 +1,69 @@
+---
+type:
+  title: Type
+  content: >
+    Sélectionner <span class="doc-desc-opt">Privé</span> si vous voulez masquer l'assignation de ce département dans le portail client.  De plus, lorsqu'un département est  <span class="doc-desc-opt">privé</span>, la <span class="doc-desc-title">signature du département</span> ne sera pas affiché dans les réponses par courriel. <br/><br/> Au moins un département doit être <span class="doc-desc-opt">public</span>
+email:
+  title: Courriel
+  content: >
+    Adresse e-mail utilisée lorsque les réponses sont envoyées aux utilisateurs lorsque les Agents postent des réponses aux tickets.
+template:
+  title: Ensemble de modèles
+  content: >
+    <span class="doc-desc-title">Template</span> d'email utilisé pour les réponses automatiques, les alertes et les avis pour les tickets acheminés vers ce département.
+  links:
+    - 
+      title: Gérer les modèles
+      href: /scp/templates.php
+sla:
+  title: SLA
+  content: >
+    Service Level Agreement pour les tickets de ce service.
+  links:
+    - 
+      title: Gérer les Plans SLA
+      href: /scp/slas.php
+manager:
+  title: Chef de service
+  content: >
+    Sélectionnez un <span class="doc-desc-title">Gérant</span> pour ce département. <br/> <br/> Les gérants peuvent être configurés pour recevoir des alertes spéciales et ont également le droit de supprimer l'attribution des tickets.
+  links:
+    - 
+      title: Gérer les alertes et avis
+      href: /scp/settings.php?t=alerts
+group_membership:
+  title: Destinataires des alertes &amp; avis
+  content: >
+    Sélectionnez les destinataires des <span class="doc-desc-title"> alertes &amp; avis</span> configurés.
+  links:
+    - 
+      title: Configurer les alertes et avis
+      href: /scp/settings.php?t=alerts
+sandboxing:
+  title: Restrictions sur l'assignement de ticket
+  content: >
+    Activez ceci pour restreindre l'assignement du ticket pour inclure uniquement les membres de ce département. L'accès du département peut être étendu aux groupes, si <span class="doc-desc-title"> l'Appartenance au groupe</span> est également activée.
+auto_response_settings:
+  title: Réglages du répondeur automatique
+  content: >
+    Cela permet de vous permet de substituer les paramètres globaux de répondeur automatique pour ce service.
+new_ticket:
+  title: Réponse automatique à la création d'un ticket
+  content: >
+    Vous pouvez désactiver la réponse automatique envoyée à l'utilisateur lorsqu'un nouveau ticket est créé et acheminé à ce département.
+new_message:
+  title: Réponse automatique sur un nouveau message
+  content: >
+    Vous pouvez désactiver la réponse automatique envoyée à l'utilisateur pour confirmer un message récemment affiché pour les tickets dans ce département.
+auto_response_email:
+  title: E-mail de réponse automatique
+  content: >
+    Sélectionnez une adresse de courriel d'où sera envoyé les réponses automatiques de ce département.
+department_access:
+  title: Accès du groupe
+  content: >
+    Permettre aux Agents d'autres départements d’accéder aux tickets de ce département.
+department_signature:
+  title: Signature du service
+  content: >
+    La signature est disponible comme un choix, pour les départements <span class="doc-desc-opt"> publiques </span>,  pour les réponses des agents.

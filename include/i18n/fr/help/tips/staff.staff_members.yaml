@@ -1,0 +1,9 @@
+---
+staff_members:
+  title: Membres du personnel
+  content: >
+    Le tableau suivant affiche les résultats du filtre ci-dessus. Si aucun paramètre de filtre n'est choisi, alors la liste de tous les <span class="doc-desc-title">Membres du personnel</span> est affichée et est séparée en pages. Reportez-vous à la section pages ci-dessous pour naviguer dans les résultats.
+status:
+  title: État
+  content: >
+    Cela permet d'afficher le(s) <span class="doc-desc-title">Agent(s)</span> soit verrouillé, actif ou actif (vacances).

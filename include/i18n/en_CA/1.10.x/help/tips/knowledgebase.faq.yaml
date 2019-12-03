@@ -1,0 +1,9 @@
+---
+listing_type:
+  title: Listing Type
+  content: >
+    Choose <span class="doc-desc-opt">Public (publish)</span> if you would like this <span class="doc-desc-title"> FAQ</span> to be published on public knowledgebase if the parent category is public.
+  links:
+    - 
+      title: Enable the Public Knowledgebase for the Client Portal
+      href: /scp/settings.php?t=kb

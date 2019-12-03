@@ -1,0 +1,10 @@
+---
+type:
+  title: Type
+  content: >
+    If the Department’s Type is Private, then the Department Signature will not be available on response nor will the department assignment show from the Client Portal.
+dept_manager:
+  title: Department Manager
+  content: >
+    You may choose an Agent as a Department Manager to receive Alerts & Notices for tickets in departments.
+  0: Agents do not have to be members of the Department to be the Manager of the Department

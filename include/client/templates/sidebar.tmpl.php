@@ -1,19 +1,22 @@
 <?php
 $BUTTONS = isset($BUTTONS) ? $BUTTONS : true;
 ?>
-    <div class="sidebar pull-right">
+    <div class="w3-third">
+    <div class="w3-col w3-hide-small" style="width:20px;">&nbsp;</div>
+    <div class="w3-rest">
 <?php if ($BUTTONS) { ?>
         <div class="front-page-button flush-right">
-<p>
+            <div class="w3-hide-medium w3-hide-large" style="height:20px">&nbsp;</div>
+<p style="margin-top:0">
 <?php
     if ($cfg->getClientRegistrationMode() != 'disabled'
         || !$cfg->isClientLoginRequired()) { ?>
-            <a href="open.php" style="display:block" class="blue button"><?php
+            <a href="open.php" style="display:block" class="w3-btn w3-round w3-pale-green w3-hover-green"><?php
                 echo __('Open a New Ticket');?></a>
 </p>
 <?php } ?>
 <p>
-            <a href="view.php" style="display:block" class="green button"><?php
+            <a href="view.php" style="display:block" class="w3-btn w3-round w3-pale-blue w3-hover-blue"><?php
                 echo __('Check Ticket Status');?></a>
 </p>
         </div>
@@ -42,5 +45,6 @@ $BUTTONS = isset($BUTTONS) ? $BUTTONS : true;
 <?php
     }
         ?></div>
+    </div>
     </div>
 

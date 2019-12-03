@@ -1,0 +1,33 @@
+---
+teams:
+  title: Équipes
+  content: >
+    Les équipes sont constitués de un ou plusieurs agents faisant équipe ensemble de le but de répondre aux demandes. Les membres de l'équipe peuvent s'étendre au-delà des limites de département.
+status:
+  title: État
+  content: >
+    Si cette équipe est <span class="doc-desc-opt">Désactivée</span>, elle ne sera pas disponibles pour les affectations de ticket ni recevoir des alertes &amp; avis sur les attributions antérieures.
+lead:
+  title: Chef d'équipe
+  content: >
+    Une <span class="doc-desc-title">équipe</span> peut avoir un chef nommé qui peut recevoir <span class="doc-desc-title">les alertes &amp; avis</span> distincts des membres.
+  links:
+    - 
+      title: Configurer les alertes &amp; avis
+      href: /scp/settings.php?t=alerts
+assignment_alert:
+  title: Alerte d'affectation
+  content: >
+    Vous pouvez désactiver <span class="doc-desc-title">assignement d'alertes</span> pour les tickets assignés à cette équipe.
+  links:
+    - 
+      title: Configurer les alertes &amp; avis
+      href: /scp/settings.php?t=alerts
+members:
+  title: Membres de l'équipe
+  content: >
+    L’adhésion à l’équipe est configuré via le profil de l'agent.
+  links:
+    - 
+      title: Gérer le personnel
+      href: /scp/staff.php

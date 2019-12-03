@@ -1,0 +1,33 @@
+---
+- 
+  id: 1
+  role_id: 1
+  flags: 1
+  name: Lion Tamers
+  notes: System overlords. These folks (initially) have full control to all the departments they have access to.
+  depts:
+    - 1
+    - 2
+    - 3
+- 
+  id: 2
+  role_id: 2
+  flags: 1
+  name: Elephant Walkers
+  notes: |
+    Inhabitants of the ivory tower
+  depts:
+    - 1
+    - 2
+    - 3
+- 
+  id: 3
+  role_id: 2
+  flags: 1
+  name: Flea Trainers
+  notes: |
+    Lowly staff members
+  depts:
+    - 1
+    - 2
+    - 3

@@ -16,10 +16,10 @@ $userid=Format::input($_POST['userid']);
     <br>
     <div>
         <label for="username"><?php echo __('Username'); ?>:</label>
-        <input id="username" type="text" name="userid" size="30" value="<?php echo $userid; ?>">
+        <input id="username" type="text" name="userid" size="30" value="<?php echo $userid; ?>" class="w3-input">
     </div>
     <p>
-        <input class="btn" type="submit" value="Login">
+        <input class="btn w3-input" type="submit" value="Login">
     </p>
     </div>
 </form>

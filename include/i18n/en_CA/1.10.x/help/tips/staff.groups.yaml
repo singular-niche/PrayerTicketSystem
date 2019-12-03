@@ -1,0 +1,13 @@
+---
+groups:
+  title: Groups
+  content: >
+    Groups are used to define an Agent's permissions in the help desk. Groups can also grant access to Departments other than an Agent's primary Department.
+status:
+  title: Status
+  content: >
+    If <span class="doc-desc-opt">Disabled</span>, Agents assigned to this Group cannot sign in and will not receive Department Alerts &amp; Notices.
+department_access:
+  title: Department Access
+  content: >
+    Check all departments to which the Group members are allowed access.

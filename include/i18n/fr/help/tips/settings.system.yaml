@@ -1,0 +1,45 @@
+---
+helpdesk_status:
+  title: Statut du helpdesk
+  content: >
+    Si l'état est modifié en <span class="doc-desc-opt"> Déconnecté</span>, l'interface du client sera désactivée.  Cependant, cela n'affecte pas toute interaction Agent normale avec le panneau de l'Agent.
+helpdesk_url:
+  title: URL du helpdesk
+  content: >
+    Cette URL est la base de votre installation osTicket. Elle est utilisée dans les emails pour diriger les utilisateurs vers votre helpdesk.
+helpdesk_name_title:
+  title: Nom du support
+  content: >
+    C'est le titre qui apparaît dans l'onglet navigateur. Si votre page de bureau d'aide est mis en signet, ce sera le titre/nom de la page du site.
+default_department:
+  title: Département par défaut
+  content: >
+    Choisissez <span class="doc-desc-title">Département</span> par défaut pour les tickets qui ne sont pas automatiquement assigné à un Département. <br/> <br/> Un ticket peut filtrer sur la base de la rubrique d'aide, des e-mails entrants et des paramètres de filtre de ticket.
+default_page_size:
+  title: Taille de page par défaut
+  content: >
+    Choisissez le nombre d'éléments affichés par page dans les tickets en attente du panneau de l'Agent. Chaque Agent peut également personnaliser ce nombre pour leur propre compte dans <span class="doc-desc-title">Mes préférences</span>.
+default_log_level:
+  title: Niveau de journalisation par défaut
+  content: >
+    Détermine le niveau minimum des entrées qui sont enregistrés dans le <span class="doc-desc-title">journal système</span>. <span class="doc-desc-opt">Debug</span> représente la plus petite sévérité, et  <span class="doc-desc-opt">Erreurs</span> représente la plus grande sévérité. Par exemple, si vous voulez voir toutes les entrées dans le <span class="doc-desc-title">journal système</span>, choisissez<span class="doc-desc-opt">Debug</span>.
+purge_logs:
+  title: Purger les journaux
+  content: >
+    Détermine la durée de conservation des entrées du <span class="doc-desc-title">journal système</span> avant qu'elles ne soient effacées.
+default_name_formatting:
+  title: Mise en forme du nom par défaut
+  content: >
+    Choisissez un format pour les noms utilisés par le système. Les modèles de courriel l'utilisera pour les noms si aucun autre format n'est spécifié dans la variable.
+  links:
+    - 
+      title: Variables de modèle de courriel supportées
+      href: 'http://osticket.com/wiki/Email_templates'
+date_time_options:
+  title: Options de date et d'heure
+  content: >
+    Les paramètres suivants définissent les paramètres de la  date &amp; de l'heure pour les clients. Vous pouvez modifier la façon dont elles apparaissent en utilisant les caractères de format de date PHP. Les dates indiquées ci-dessous ne font qu'illustrer le résultat de leurs valeurs correspondantes.
+  links:
+    - 
+      title: Consultez le tableau des formats de date PHP
+      href: 'http://php.net/manual/fr/function.date.php'

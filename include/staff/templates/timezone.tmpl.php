@@ -4,7 +4,7 @@ $TZ_ALLOW_DEFAULT = isset($TZ_ALLOW_DEFAULT) ? $TZ_ALLOW_DEFAULT : true;
 $TZ_PLACEHOLDER = @$TZ_PLACEHOLDER ?: __('System Default');
 $TZ_TIMEZONE = @$TZ_TIMEZONE ?: '';
 ?>
-<select name="<?php echo $TZ_NAME; ?>" id="timezone-dropdown"
+<select class="w3-select" name="<?php echo $TZ_NAME; ?>" id="timezone-dropdown"
         data-placeholder="<?php echo $TZ_PLACEHOLDER; ?>">
 <?php if ($TZ_ALLOW_DEFAULT) { ?>
         <option value=""></option>

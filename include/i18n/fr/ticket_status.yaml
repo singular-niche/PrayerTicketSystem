@@ -1,0 +1,50 @@
+---
+- 
+  id: 1
+  name: Ouvert
+  state: open
+  mode: 3
+  sort: 1
+  flags: 0
+  properties:
+    description: Tickets ouverts.
+- 
+  id: 2
+  name: Résolu
+  state: resolved
+  mode: 3
+  sort: 2
+  flags: 0
+  properties:
+    description: >
+      Les tickets résolus sont des tickets fermés qui ne peuvent être ré-ouverts que par l'utilisateur final. Cela peut être utile lorsqu'une tâche automatique est utilisée pour fermer des tickets résolus avec l'envoi d'une notification à l'utilisateur final.
+- 
+  id: 3
+  name: Fermé
+  state: closed
+  mode: 3
+  sort: 3
+  flags: 0
+  properties:
+    description: >
+      Les billets marqués comme étant fermés ne peuvent pas être ré-ouverts par l'utilisateur final. Les billets seront cependant toujours accessibles sur les panneaux client et équipe.
+- 
+  id: 4
+  name: Archivé
+  state: archived
+  mode: 3
+  sort: 4
+  flags: 0
+  properties:
+    description: >
+      Tickets accessibles uniquement par les administrateurs mais plus dans les listes de ticket.
+- 
+  id: 5
+  name: Supprimé
+  state: deleted
+  mode: 3
+  sort: 5
+  flags: 0
+  properties:
+    description: >
+      Tickets en attente de suppression. Non accessible depuis les listes de Tickets.

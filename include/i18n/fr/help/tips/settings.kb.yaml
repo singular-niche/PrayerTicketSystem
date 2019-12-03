@@ -1,0 +1,29 @@
+---
+knowledge_base_settings:
+  title: Paramètres de la Base de connaissances
+  content: >
+    
+knowledge_base_status:
+  title: Statut de la Base de connaissances
+  content: >
+    Activez ce paramètre pour autoriser les utilisateurs d’accéder en libre-service à vos articles de la base de connaissances publiques. Les catégories de la <br><br>base de connaissances et de la FAQ peuvent être faite en interne (visible uniquement par les Agents.)
+  links:
+    - 
+      title: Gérer la Base de connaissances
+      href: /scp/kb.php
+restrict_kb:
+  title: Restreindre l'accès à la base de connaissance
+  content: >
+    Activer cette option pour empêcher que les utilisateurs non authentifiés puissent accéder aux articles de la base de connaissance depuis l'interface client.
+  links:
+    - 
+      title: Paramètres de contrôle d'accès
+      href: /scp/settings.php?t=access
+canned_responses:
+  title: Réponses préenregistrées
+  content: >
+    Activer ce paramètre pour permettre aux Agents d'utiliser des <span class="doc-desc-title"> réponses pré-formatées</span> lorsqu'ils répondent aux billets.
+  links:
+    - 
+      title: Gérer les réponses pré-formatées
+      href: /scp/canned.php

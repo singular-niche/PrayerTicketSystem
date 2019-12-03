@@ -1,0 +1,53 @@
+---
+search_field:
+  title: Champ de recherche
+  content: >
+    
+advanced:
+  title: Avancé
+  content: >
+    Affiner vos paramètres de recherche. Une fois que vous aurez sélectionné vos critères de recherche avancée et lancé la recherche, vous pourrez <span class="doc-desc-title">exporter</span> ces données au bas de la page de billets.
+open_tickets_table:
+  title: Tableau des tickets ouverts
+  content: >
+    Tous les tickets actuellement ouverts et nécessitants une attention
+ticket:
+  title: Ticket
+  content: >
+    
+date:
+  title: Date
+  content: >
+    
+subject:
+  title: Sujet
+  content: >
+    
+from:
+  title: De
+  content: >
+    
+priority:
+  title: Priorité
+  content: >
+    
+assigned_to:
+  title: Assigné à
+  content: >
+    
+export:
+  title: Exporter
+  content: >
+    Exporter vos données visibles vers un fichier CSV. Les fichiers CSV peuvent être ouvert avec n'importe quel tableur (Microsoft Excel, Apple Pages, OpenOffice, etc..).
+advanced_search_dialog:
+  title: Recherche avancée
+  content: >
+    
+adv_keyword:
+  title: Recherche par mots-clés
+  content: >
+    Trouver des éléments basés sur les objets et les messages ainsi que sur tout le contenu textuel associé aux champs personnalisés des utilisateurs et des tickets.
+adv_date_range:
+  title: Recherche par plage de dates
+  content: >
+    Définition ici

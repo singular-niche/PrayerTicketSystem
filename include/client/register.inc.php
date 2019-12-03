@@ -19,16 +19,20 @@ $info = Format::htmlchars(($errors && $_POST)?$_POST:$info);
 'Use the forms below to create or update the information we have on file for your account'
 ); ?>
 </p>
-<form action="account.php" method="post">
+<div class="w3-responsive">
+<form action="account.php" method="post" class="w3-panel w3-card-4 w3-light-grey">
   <?php csrf_token(); ?>
   <input type="hidden" name="do" value="<?php echo Format::htmlchars($_REQUEST['do']
-    ?: ($info['backend'] ? 'import' :'create')); ?>" />
-<table width="800" class="padded">
+    ?: ($info['backend'] ? 'import' :'create')); ?>" class="w3-input" />
+<table width="100%" class="w3-table">
 <tbody>
+<div class="w3-mobile">
 <?php
     $cf = $user_form ?: UserForm::getInstance();
     $cf->render(array('staff' => false, 'mode' => 'create'));
 ?>
+</div>
+
 <tr>
     <td colspan="2">
         <div><hr><h3><?php echo __('Preferences'); ?></h3>
@@ -97,9 +101,10 @@ $info = Format::htmlchars(($errors && $_POST)?$_POST:$info);
         window.location.href='index.php';"/>
 </p>
 </form>
+</div>
 <?php if (!isset($info['timezone'])) { ?>
 <!-- Auto detect client's timezone where possible -->
-<script type="text/javascript" src="<?php echo ROOT_PATH; ?>js/jstz.min.js"></script>
+<script type="text/javascript" src="<?php echo ROOT_PATH; ?>js/jstz.min.js?035fd0a"></script>
 <script type="text/javascript">
 $(function() {
     var zone = jstz.determine();

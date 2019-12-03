@@ -1,0 +1,25 @@
+---
+notes: |
+  Envoyé à l'utilisateur lors de la validation une réponse automatique suite à la création d'un ticket.
+  
+  Les variables disponibles pour le remplacement: %{ticket.*}, %{response}
+subject: |
+  Re: %{ticket.subject} [#%{ticket.number}]
+body: |
+  <h3><strong>Cher %{recipient.name.first}</strong></h3>
+  Une demande de support a été créé et un ticket a été assigné <a href="%{recipient.ticket_link}">%{ticket.number}"></a> avec la réponse automatique suivante
+  <br><br>
+  Rubrique: <strong>%{ticket.topic.name}</strong>
+  <br>
+  Sujet: <strong>%{ticket.subject}</strong>
+  <br>
+  <br>
+  %{response}
+  <br>
+  <br>
+  <div style="color: rgb(127, 127, 127);">
+  Votre équipe %{company.name}<br>
+  %{signature}</div>
+  <hr>
+  <div style="color: rgb(127, 127, 127); font-size: small;"><em>Nous espérons que cette réponse a suffisamment répondu à votre demande. Si vous désirez rajouter des commentaires ou donner de plus amples informations, merci de répondre à ce courriel ou <a href="%{recipient.ticket_link}"><span
+  style="color: rgb(84, 141, 212);" >connectez-vous à votre compte</span></a> pour visualiser les archives de vos demandes.</em></div>

@@ -21,20 +21,11 @@ $section = 'home';
 require(CLIENTINC_DIR.'header.inc.php');
 ?>
 <div id="landing_page">
-<?php include CLIENTINC_DIR.'templates/sidebar.tmpl.php'; ?>
-<div class="main-content">
+<div class="w3-row">
+<div class="w3-twothird">
+    <div class="w3-responsive">
+
 <?php
-if ($cfg && $cfg->isKnowledgebaseEnabled()) { ?>
-<div class="search-form">
-    <form method="get" action="kb/faq.php">
-    <input type="hidden" name="a" value="search"/>
-    <input type="text" name="q" class="search" placeholder="<?php echo __('Search our knowledge base'); ?>"/>
-    <button type="submit" class="green button"><?php echo __('Search'); ?></button>
-    </form>
-</div>
-    <div class="thread-body">
-<?php
-}
     if($cfg && ($page = $cfg->getLandingPage()))
         echo $page->getBodyWithImages();
     else
@@ -42,14 +33,15 @@ if ($cfg && $cfg->isKnowledgebaseEnabled()) { ?>
     ?>
     </div>
 </div>
-<div class="clear"></div>
+<?php include CLIENTINC_DIR.'templates/sidebar.tmpl.php'; ?>
+</div>
 
+<div class="clear"></div>
 <div>
 <?php
 if($cfg && $cfg->isKnowledgebaseEnabled()){
     //FIXME: provide ability to feature or select random FAQs ??
 ?>
-<br/><br/>
 <?php
 $cats = Category::getFeatured();
 if ($cats->all()) { ?>
@@ -72,11 +64,14 @@ if ($cats->all()) { ?>
         </div>
 <?php } ?>
     </div>
+    
 <?php
     }
 }
 ?>
+
 </div>
 </div>
+
 
 <?php require(CLIENTINC_DIR.'footer.inc.php'); ?>
